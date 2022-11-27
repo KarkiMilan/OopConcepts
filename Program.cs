@@ -1,10 +1,14 @@
-﻿Car.FullThrottle();
-public class Car
+﻿Car.Suv();
+class Car
 {
-  string color = "red";
-  int maxSpeed = 200; // field  
-    public static void FullThrottle()
+  string model;
+    public Car()
     {
-        Console.WriteLine("The car is going as fast as it can!");  
+        model = "Mustang";
+    }
+    public static void Suv()
+    {
+        Car Ford = new Car();
+        Console.WriteLine(Ford.model);       
     }
 }

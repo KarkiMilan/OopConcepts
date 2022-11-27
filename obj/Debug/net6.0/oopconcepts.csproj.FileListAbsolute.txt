@@ -1,0 +1,15 @@
+C:\Users\MILAN\Documents\oopconcepts\bin\Debug\net6.0\oopconcepts.exe
+C:\Users\MILAN\Documents\oopconcepts\bin\Debug\net6.0\oopconcepts.deps.json
+C:\Users\MILAN\Documents\oopconcepts\bin\Debug\net6.0\oopconcepts.runtimeconfig.json
+C:\Users\MILAN\Documents\oopconcepts\bin\Debug\net6.0\oopconcepts.dll
+C:\Users\MILAN\Documents\oopconcepts\bin\Debug\net6.0\oopconcepts.pdb
+C:\Users\MILAN\Documents\oopconcepts\obj\Debug\net6.0\oopconcepts.csproj.AssemblyReference.cache
+C:\Users\MILAN\Documents\oopconcepts\obj\Debug\net6.0\oopconcepts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MILAN\Documents\oopconcepts\obj\Debug\net6.0\oopconcepts.AssemblyInfoInputs.cache
+C:\Users\MILAN\Documents\oopconcepts\obj\Debug\net6.0\oopconcepts.AssemblyInfo.cs
+C:\Users\MILAN\Documents\oopconcepts\obj\Debug\net6.0\oopconcepts.csproj.CoreCompileInputs.cache
+C:\Users\MILAN\Documents\oopconcepts\obj\Debug\net6.0\oopconcepts.dll
+C:\Users\MILAN\Documents\oopconcepts\obj\Debug\net6.0\refint\oopconcepts.dll
+C:\Users\MILAN\Documents\oopconcepts\obj\Debug\net6.0\oopconcepts.pdb
+C:\Users\MILAN\Documents\oopconcepts\obj\Debug\net6.0\oopconcepts.genruntimeconfig.cache
+C:\Users\MILAN\Documents\oopconcepts\obj\Debug\net6.0\ref\oopconcepts.dll

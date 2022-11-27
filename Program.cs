@@ -1,12 +1,10 @@
-﻿Car.TestMethod();
+﻿Car.FullThrottle();
 public class Car
 {
-  string color = "red"; 
-    public static void TestMethod()
+  string color = "red";
+  int maxSpeed = 200; // field  
+    public static void FullThrottle()
     {
-        Car myObj1 = new Car(); 
-		Car myObj2 = new Car(); 
-		Console.WriteLine(myObj1.color); 
-		Console.WriteLine(myObj2.color); 
+        Console.WriteLine("The car is going as fast as it can!");  
     }
 }

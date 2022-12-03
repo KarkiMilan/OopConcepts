@@ -1,25 +1,16 @@
-﻿var item = new SaleItem("Shoes", 19.95m);
-Console.WriteLine($"{item.Name}: sells for {item.Price:C2}");
-public class SaleItem
+﻿TestStructs.Area();
+public struct Rectangle
 {
-    string _name;
-    decimal _cost;
+    public int width, height;
 
-    public SaleItem(string name, decimal cost)
+}
+public class TestStructs
+{
+    public static void Area()
     {
-        _name = name;
-        _cost = cost;
-    }
-
-    public string Name
-    {
-        get => _name;
-        set => _name = value;
-    }
-
-    public decimal Price
-    {
-        get => _cost;
-        set => _cost = value;
+        Rectangle r= new Rectangle();
+        r.width = 4;
+        r.height = 5;
+        Console.WriteLine("Area of Rectangle is: " + (r.width * r.height));
     }
 }

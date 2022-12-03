@@ -1,16 +1,23 @@
-﻿TestStructs.Area();
-public struct Rectangle
+﻿using System;
+class SampleCollection<T>
 {
-    public int width, height;
+   // Declare an array to store the data elements.
+   private T[] arr = new T[100];
 
+   // Define the indexer to allow client code to use [] notation.
+   public T this[int i]
+   {
+      get { return arr[i]; }
+      set { arr[i] = value; }
+   }
 }
-public class TestStructs
+
+class Program
 {
-    public static void Area()
-    {
-        Rectangle r= new Rectangle();
-        r.width = 4;
-        r.height = 5;
-        Console.WriteLine("Area of Rectangle is: " + (r.width * r.height));
-    }
+   static void Main()
+   {
+      var stringCollection = new SampleCollection<string>();
+      stringCollection[0] = "Hello, World";
+      Console.WriteLine(stringCollection[0]);
+   }
 }

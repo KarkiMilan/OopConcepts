@@ -1,20 +1,20 @@
-﻿Car.Suv();
-class Car
+﻿TimePeriod t = new TimePeriod();
+t.Hours = 24;
+Console.WriteLine($"Time in hours: {t.Hours}");
+public class TimePeriod
 {
-  public string model;
-  public string color;
-  public int year;
-    public Car(string modelName, string modelColor, int modelYear)
+    private double _seconds;
+
+    public double Hours
     {
-        model = modelName;
-        color = modelColor;
-        year = modelYear;
-    }
-    public static void Suv()
-    {
-        Car Ford = new Car("Mustang", "Red", 1969);
-        Car Opel = new Car("Astra", "White", 2005);
-        Console.WriteLine(Ford.model);
-        Console.WriteLine(Opel.model);     
+        get { return _seconds / 3600; }
+        set
+        {
+            if (value < 0 || value > 24)
+                throw new ArgumentOutOfRangeException(nameof(value),
+                      "The valid range is between 0 and 24.");
+
+            _seconds = value * 3600;          
+        }   
     }
 }

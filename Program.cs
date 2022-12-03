@@ -1,20 +1,25 @@
-﻿TimePeriod t = new TimePeriod();
-t.Hours = 24;
-Console.WriteLine($"Time in hours: {t.Hours}");
-public class TimePeriod
+﻿var item = new SaleItem("Shoes", 19.95m);
+Console.WriteLine($"{item.Name}: sells for {item.Price:C2}");
+public class SaleItem
 {
-    private double _seconds;
+    string _name;
+    decimal _cost;
 
-    public double Hours
+    public SaleItem(string name, decimal cost)
     {
-        get { return _seconds / 3600; }
-        set
-        {
-            if (value < 0 || value > 24)
-                throw new ArgumentOutOfRangeException(nameof(value),
-                      "The valid range is between 0 and 24.");
+        _name = name;
+        _cost = cost;
+    }
 
-            _seconds = value * 3600;          
-        }   
+    public string Name
+    {
+        get => _name;
+        set => _name = value;
+    }
+
+    public decimal Price
+    {
+        get => _cost;
+        set => _cost = value;
     }
 }

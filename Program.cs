@@ -4,27 +4,32 @@ namespace ThisReference
 {
     public class ThisRef
     {
-        public class A
+        public class PolyMomo
         {
-            public string whatstring = "Default value";
-            public void WhatMethod()
+            public string PropertyOne = "DefaultOne";
+            public string PropertyTwo = "DefaultTwo";
+
+            public void Properties(string one, string two)
             {
-                Console.WriteLine($"Coming from class A, what string: {whatstring}!");
+                PropertyOne = one;
+                PropertyTwo = two;
             }
-        }
-        public class B : A
-        {
-            public void setstring (string newvalue)
+
+            public void Properties(string onlyFirst)
             {
-                whatstring = newvalue;
+                PropertyOne = onlyFirst;
             }
         }
         static void Main(String[] args)
         {
-            B c = new B();
-            Console.WriteLine($"Default value of whatstring: {c.whatstring} coming from class A!");
-            c.setstring("New Value");
-            Console.WriteLine($"Calling inherited method of WhatMethod: c.setstring() with result of: {c.whatstring}");
+            PolyMomo Demo = new PolyMomo();
+            Console.WriteLine($"Property values before change, PropertyOne: {Demo.PropertyOne}, PropertyTwo: {Demo.PropertyTwo}");
+            Demo.Properties("first", "second");
+            Console.WriteLine($"Both properties were changed PropertyOne: {Demo.PropertyOne}, and PropertyTwo: {Demo.PropertyTwo}");
+            PolyMomo DemoTwo = new PolyMomo();
+            Console.WriteLine($"Property value before change, PropertyOne: {Demo.PropertyOne}!");
+            DemoTwo.Properties("OnlyFirst");
+            Console.WriteLine($"Only first property was changed to: {DemoTwo.PropertyOne}");
             Console.Read();
         }
     }

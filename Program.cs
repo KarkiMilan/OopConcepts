@@ -1,61 +1,30 @@
-﻿public static class TemperatureConverter
-{
-    public static double CelsiusToFahrenheit(string temperatureCelsius)
-    {
-        // Convert argument to double for calculations.
-        double celsius = Double.Parse(temperatureCelsius);
-
-        // Convert Celsius to Fahrenheit.
-        double fahrenheit = (celsius * 9 / 5) + 32;
-
-        return fahrenheit;
-    }
-
-    public static double FahrenheitToCelsius(string temperatureFahrenheit)
-    {
-        // Convert argument to double for calculations.
-        double fahrenheit = Double.Parse(temperatureFahrenheit);
-
-        // Convert Fahrenheit to Celsius.
-        double celsius = (fahrenheit - 32) * 5 / 9;
-
-        return celsius;
-    }
-}
-
-class TestTemperatureConverter
-{
-    static void Main()
-    {
-        Console.WriteLine("Please select the convertor direction");
-        Console.WriteLine("1. From Celsius to Fahrenheit.");
-        Console.WriteLine("2. From Fahrenheit to Celsius.");
-        Console.Write(":");
-
-        string? selection = Console.ReadLine();
-        double F, C = 0;
-
-        switch (selection)
-        {
-            case "1":
-                Console.Write("Please enter the Celsius temperature: ");
-                F = TemperatureConverter.CelsiusToFahrenheit(Console.ReadLine() ?? "0");
-                Console.WriteLine("Temperature in Fahrenheit: {0:F2}", F);
-                break;
-
-            case "2":
-                Console.Write("Please enter the Fahrenheit temperature: ");
-                C = TemperatureConverter.FahrenheitToCelsius(Console.ReadLine() ?? "0");
-                Console.WriteLine("Temperature in Celsius: {0:F2}", C);
-                break;
-
-            default:
-                Console.WriteLine("Please select a convertor.");
-                break;
-        }
-
-        // Keep the console window open in debug mode.
-        Console.WriteLine("Press any key to exit.");
-        Console.ReadKey();
-    }
-}
+﻿using System;  
+   public class Account  
+    {  
+        public int id;   
+        public String name;  
+        public static float rateOfInterest;  
+        public Account(int id, String name)  
+        {  
+            this.id = id;  
+            this.name = name;  
+        }  
+        static Account()  
+        {  
+            rateOfInterest = 9.5f;  
+        }  
+        public void display()  
+        {  
+            Console.WriteLine(id + " " + name+" "+rateOfInterest);  
+        }  
+   }  
+   class TestEmployee{  
+       public static void Main(string[] args)  
+        {  
+            Account a1 = new Account(101, "Sonoo");  
+            Account a2 = new Account(102, "Mahesh");  
+            a1.display();  
+            a2.display();  
+  
+        }  
+    }  

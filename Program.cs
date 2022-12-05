@@ -1,30 +1,26 @@
 ﻿using System;  
-   public class Account  
+namespace CSharpFeatures  
+{  
+    public class Student  
     {  
-        public int id;   
-        public String name;  
-        public static float rateOfInterest;  
-        public Account(int id, String name)  
+        // Creating dynamic property  
+        public dynamic Name { get; set; }  
+        // Creating a dynamic method  
+        public dynamic ShowMSG(string msg)  
         {  
-            this.id = id;  
-            this.name = name;  
-        }  
-        static Account()  
-        {  
-            rateOfInterest = 9.5f;  
-        }  
-        public void display()  
-        {  
-            Console.WriteLine(id + " " + name+" "+rateOfInterest);  
-        }  
-   }  
-   class TestEmployee{  
-       public static void Main(string[] args)  
-        {  
-            Account a1 = new Account(101, "Sonoo");  
-            Account a2 = new Account(102, "Mahesh");  
-            a1.display();  
-            a2.display();  
-  
+            return msg;  
         }  
     }  
+    public class DynamicExample  
+    {  
+        public static void Main(string[] args)  
+        {  
+            Student student = new Student();  
+            student.Name = "MILAN";  
+            Console.WriteLine(student.Name);  
+            // Storing result in dynamic object  
+            dynamic msg = student.ShowMSG("Welcome to the Bajra");  
+            Console.WriteLine(msg);  
+        }  
+    }  
+}  
